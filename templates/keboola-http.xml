@@ -1,0 +1,23 @@
+<templateSet group="Keboola HTTP Request">
+  <template name="manage" value="GET https://{{host}}:{{port}}/manage/&#10;Content-Type: application/json&#10;X-KBC-ManageApiToken: {{manageToken}}&#10;&#10;{&#10;  $END$&#10;}&#10;&#10;###" description="Generic manage API request" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="REQUEST" value="true" />
+    </context>
+  </template>
+  <template name="storage" value="GET https://{{host}}:{{port}}/v2/storage/$END$&#10;X-StorageApi-Token: {{storageTokenSnowflake}}&#10;&#10;&#10;###" description="Generic storage API request" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="REQUEST" value="true" />
+    </context>
+  </template>
+  <template name="storage-rs" value="GET https://{{host}}:{{port}}/v2/storage/$END$&#10;X-StorageApi-Token: {{storageTokenRedShift}}&#10;&#10;&#10;###" description="Generic storage API request" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="REQUEST" value="true" />
+    </context>
+  </template>
+  <template name="time" value="$time$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="time" expression="time(sSystemTime)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="REQUEST" value="true" />
+    </context>
+  </template>
+</templateSet>
