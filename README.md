@@ -17,3 +17,7 @@ Then you need to set up the settings you got. There are two options. You set it 
 ## Enable inspections
 
 *Settings → Editor → Inspections → Scheme: Keboola*
+
+## License
+
+MIT licensed, see [LICENSE](./LICENSE) file.
